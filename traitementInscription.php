@@ -13,16 +13,12 @@ echo "connexion échouée: " . $e->getMessage();
 }
 
 if (isset($_POST['ok'])) {
-    $nom = $_POST['nom'];
-    $prenom = $_POST['prenom'];
-    $email = $_POST['email'];
+    $name = $_POST['name'];
     $password = $_POST['password'];
 
-    $requete = $bdd->prepare("INSERT INTO users VALUES (0, :nom, :prenom, :email, :password)");
+    $requete = $bdd->prepare("INSERT INTO users VALUES (0, :name, :password)");
     $requete->execute(array(
-        "nom" => $nom,
-        "prenom" => $prenom,
-        "email" => $email,
+        "name" => $name,
         "password" => $password
     ));
     echo "inscription réussie";

@@ -21,11 +21,11 @@ echo "connexion échouée: " . $e->getMessage();
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  $email = $_POST['email'];
+  $name = $_POST['name'];
   $password = $_POST['password'];
 
-  if (!empty($email) && !empty($password)) {
-    $req =$bdd->query("SELECT * FROM users WHERE email = '$email' AND password = '$password'");
+  if (!empty($name) && !empty($password)) {
+    $req =$bdd->query("SELECT * FROM users WHERE name = '$name' AND password = '$password'");
     $rep = $req->fetch();
     if ($rep['id'] != false) {
       echo "connexion réussie";
@@ -37,8 +37,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 
 <form method="POST" action="">
-<label for="email">email</label>
-<input type="email" id="email" name="email" placeholder="entrez votre email" required>
+  
+<label for="name">name</label>
+<input type="name" id="name" name="name" placeholder="entrez votre nom" required>
 <br />
 
 <label for="password">mot de passe</label>
