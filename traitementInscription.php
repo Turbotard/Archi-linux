@@ -1,5 +1,5 @@
 <?php
-$servername= "10.57.33.246";
+$servername= "172.20.10.7";
 $username= "samba";
 $password = "samba";
 
