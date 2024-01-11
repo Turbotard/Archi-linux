@@ -15,5 +15,6 @@ echo "connexion échouée: " . $e->getMessage();
 $sql = "SELECT * FROM user";
 $req = $bdd->query($sql);
 while ($rep = $req->fetch()) {
-echo $rep['id']."<br>";
+echo $rep['name']."<br>";
+echo "<input type='button'>";
 }
