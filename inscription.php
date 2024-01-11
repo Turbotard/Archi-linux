@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<form method="POST" action="traitement.php">
+<form method="POST" action="traitementInscription.php">
 
 <label for="name">votre nom</label>
 <input type="text" id="name" name="name" placeholder="entrez votre nom" required>
