@@ -22,6 +22,5 @@ if (isset($_POST['ok'])) {
         "password" => $password
     ));
     echo "inscription réussie";
-    header('Location: connexion.php');
   }
 ?>
