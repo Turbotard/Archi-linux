@@ -12,7 +12,7 @@ echo "connexion réussie";
 catch (PDOException $e) {
 echo "connexion échouée: " . $e->getMessage();
 }
-$sql = "SELECT * FROM users";
+$sql = "SELECT * FROM user";
 $req = $bdd->query($sql);
 while ($rep = $req->fetch()) {
 echo $rep['id']."<br>";

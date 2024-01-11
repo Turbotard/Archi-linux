@@ -16,7 +16,7 @@ if (isset($_POST['ok'])) {
     $name = $_POST['name'];
     $password = $_POST['password'];
 
-    $requete = $bdd->prepare("INSERT INTO users VALUES (0, :name, :password)");
+    $requete = $bdd->prepare("INSERT INTO user VALUES (0, :name, :password)");
     $requete->execute(array(
         "name" => $name,
         "password" => $password

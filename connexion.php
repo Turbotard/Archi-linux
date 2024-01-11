@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $password = $_POST['password'];
 
   if (!empty($name) && !empty($password)) {
-    $req =$bdd->query("SELECT * FROM users WHERE name = '$name' AND password = '$password'");
+    $req =$bdd->query("SELECT * FROM user WHERE name = '$name' AND password = '$password'");
     $rep = $req->fetch();
     if ($rep['id'] != false) {
       echo "connexion réussie";
