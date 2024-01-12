@@ -32,30 +32,35 @@
             $delete_stmt = $bdd->prepare("DELETE FROM user WHERE id = ?");
             $delete_stmt->execute([$delete_id]);
         }
-
-
-        "<div class='block-2'>
+    ?>
+    
+    <div class='block-2'>
         <div class='block-2-header'>
-        <h3>Liste des utilisateurs</h3>
-        </div>";
-        $sql = "SELECT * FROM user";
-        $req = $bdd->query($sql);
-        echo "<div class='list'><ul>";
-        while ($rep = $req->fetch()) {
-            echo "<li><div class='user'><h4>- " . htmlspecialchars($rep['name']) . "</h4>
-              <form method='post' action=''>
-                  <input type='hidden' name='delete_id' value='" . $rep['id'] . "'>
-                  <input type='submit' class='btn' value='supprimer'>
-              </form>
-              </div></li>";
-        }
-        echo "</ul></div>";
-        "</div>";
+            <h3>Liste des utilisateurs</h3>
+        </div>
+        <div class='list'>
+            <ul>
+                <?php
+                $sql = "SELECT * FROM user";
+                $req = $bdd->query($sql);
 
-        
+                while ($rep = $req->fetch()) {
+                    echo "<li>
+                            <div class='user'>
+                                <h4>- " . htmlspecialchars($rep['name']) . "</h4>
+                                <form method='post' action=''>
+                                    <input type='hidden' name='delete_id' value='" . $rep['id'] . "'>
+                                    <input type='submit' class='btn' value='supprimer'>
+                                </form>
+                            </div>
+                          </li>";
+                }
+                ?>
+            </ul>
+        </div>
+    </div>
 
-
-        
+    <?php
     } catch (PDOException $e) {
         echo "Erreur de connexion: " . $e->getMessage();
     }
