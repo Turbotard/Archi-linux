@@ -13,7 +13,7 @@
         <h3>Gestionnaire de base de donnée</h3>
         <div class="block-3-inputs">
             <a href="connexion.php"><input type="button" class="btn" value="Connexion"></a>
-            <a href="insription.php"><input type="button" class="btn" value="Inscription"></a>
+            <a href="inscription.php"><input type="button" class="btn" value="Inscription"></a>
         </div>
     </div>
 
