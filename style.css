@@ -40,6 +40,8 @@
 
 .block-4-inputs{
     position: absolute;
+    display: flex;
+    flex-direction: row;
     top: 10%;
     left: 50%;
     transform: translate(-50%, 0);
