@@ -10,6 +10,7 @@
 
 <body>
   <?php
+  session_start(); // Démarrage de la session
 
   $env = parse_ini_file('variables.env');
 
@@ -29,9 +30,13 @@
     $password = $_POST['password'];
 
     if (!empty($name) && !empty($password)) {
-      $req = $bdd->query("SELECT * FROM user WHERE name = '$name' AND password = '$password'");
+      $req = $bdd->prepare("SELECT * FROM user WHERE name = ? AND password = ?");
+      $req->execute([$name, $password]);
       $rep = $req->fetch();
-      if ($rep['id'] != false) {
+
+      if ($rep) {
+        $_SESSION['user_id'] = $rep['id'];
+        $_SESSION['user_name'] = $name; 
         echo "connexion réussie";
       } else {
         $error_message = "identifiants incorrects";
@@ -50,24 +55,8 @@
         <p>Vous n'avez pas encore de compte ? <a href="inscription.php" style="text-decoration: none; color: blue;">inscrivez-vous !</a></p>
       </div>
       <input type="submit" value="Connexion" name="ok" class="btn">
-
     </form>
   </div>
 </body>
 
 </html>
-
-
-
-
-<!-- <form method="POST" action="">
-
-  <label for="name">name</label>
-  <input type="name" id="name" name="name" placeholder="entrez votre nom" required>
-  <br />
-
-  <label for="password">mot de passe</label>
-  <input type="password" id="password" name="password" placeholder="entrez votre mot de passe" required>
-  <br />
-  <input type="submit" value="se connecter" name="ok">
-</form> -->
