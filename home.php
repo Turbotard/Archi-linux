@@ -68,8 +68,10 @@
 
     <div class="formulaire">
     <div class="block-3-inputs">
-            <a href="connexion.php"><input type="button" class="btn" value="Connexion"></a>
-            <a href="inscription.php"><input type="button" class="btn" value="Inscription"></a>
+    <input type="name" id="name" name="name" class="input" placeholder="entrez votre nom" required>
+        <input type="password" id="password" name="password" class="input" placeholder="entrez votre mot de passe"
+          required>
+          <a href="connexion.php"><input type="button" class="btn" value="ajouter"></a>
         </div>
     </div>
 <form>
