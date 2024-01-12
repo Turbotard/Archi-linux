@@ -12,11 +12,12 @@
         <h2>S'enregistrer</h2>
         <form method="POST" action="traitementInscription.php">
             <div class="inputs">
+                <label for="name">votre nom</label>
                 <input type="text" id="name" name="name" class="input" placeholder="entrez votre nom" required>
                 <input type="password" id="password" name="password"  class="input" placeholder="entrez votre mot de passe" required>
                 <p>Vous avez déjà un compte ? <a href="connexion.php" style="text-decoration: none; color: blue;">connectez-vous !</a></p>
             </div>
-            <input type="submit" value="M'inscrire" class="btn" name="ok">
+            <input type="submit" value="m'inscrire" class="btn" name="ok">
         </form>
     </div>
 
