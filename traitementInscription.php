@@ -18,6 +18,8 @@ if (isset($_POST['ok'])) {
     echo "ok";
     $name = $_POST['name'];
     $password = $_POST['password'];
+    echo $name;
+    echo $password;
 
     $requete = $bdd->prepare("INSERT INTO user (name, password) VALUES (:name, :password)");
     echo "requete préparée";
@@ -26,8 +28,7 @@ if (isset($_POST['ok'])) {
         "password" => $password
     )
   );
-  echo $name;
-  echo $password;
+  
     echo "inscription réussie";
 }
 ?>
