@@ -7,9 +7,12 @@
 </head>
 <body>
   <?php
-$servername= "10.57.33.246";
-$username= "samba";
-$password = "samba";
+
+$env = parse_ini_file('variables.env');
+
+$servername = $env['servername'];
+$username = $env['username'];
+$password = $env['password'];
 
 try {
 $bdd = new PDO("mysql:host=$servername;dbname=users", $username, $password);
