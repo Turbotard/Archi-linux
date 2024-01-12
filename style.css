@@ -35,6 +35,12 @@ h2{
     flex-direction: column;
 }
 
+.inputs p{
+    text-align: center;
+    font-size: 0.7rem;
+}
+
+
 .input{
     margin: auto;
     width: 80%;

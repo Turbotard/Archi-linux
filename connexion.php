@@ -20,7 +20,6 @@
   try {
     $bdd = new PDO("mysql:host=$servername;dbname=users", $username, $password);
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "connexion réussie";
   } catch (PDOException $e) {
     echo "connexion échouée: " . $e->getMessage();
   }
@@ -47,6 +46,7 @@
       <div class="inputs">
         <input type="name" id="name" name="name" class="input" placeholder="entrez votre nom" required>
         <input type="password" id="password" name="password" class="input" placeholder="entrez votre mot de passe" required>
+        <p>Vous n'avez pas encore de compte ? <a href="inscription.php" style="text-decoration: none; color: blue;">inscrivez-vous !</a></p>
       </div>
       <input type="submit" value="Connexion" name="ok" class="btn">
 
