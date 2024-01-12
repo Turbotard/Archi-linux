@@ -35,8 +35,9 @@
 
 
         "<div class='block-2'>
-    <div class='block-2-header'>
-        <h3>Liste des utilisateurs</h3>";
+        <div class='block-2-header'>
+        <h3>Liste des utilisateurs</h3>
+        </div>";
         $sql = "SELECT * FROM user";
         $req = $bdd->query($sql);
         echo "<div class='list'><ul>";
@@ -49,10 +50,12 @@
               </div></li>";
         }
         echo "</ul></div>";
+        "</div>";
+
+        
 
 
-        "</div>
-    </div>";
+        
     } catch (PDOException $e) {
         echo "Erreur de connexion: " . $e->getMessage();
     }
