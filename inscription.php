@@ -16,7 +16,7 @@
             <input type="text" id="name" name="name" class="input" placeholder="Entrez votre nom" required>
 
             <label for="password">Votre mot de passe :</label>
-            <input type="password" id="password" name="password" class="input" placeholder="Entrez votre mot de passe" required minlength="8">
+            <input type="password" id="password" name="password" class="input" placeholder="Entrez votre mot de passe" required>
         </div>
         <input type="submit" value="M'inscrire" class="btn" name="ok">
     </form>
