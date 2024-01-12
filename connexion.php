@@ -35,6 +35,7 @@
         echo "connexion réussie";
       } else {
         $error_message = "identifiants incorrects";
+        echo $error_message;
       }
     }
   }
