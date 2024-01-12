@@ -15,14 +15,17 @@ try {
 }
 
 if (isset($_POST['ok'])) {
+    echo "ok";
     $name = $_POST['name'];
     $password = $_POST['password'];
 
     $requete = $bdd->prepare("INSERT INTO user (name, password) VALUES (:name, :password)");
+    echo "requete préparée";
     $requete->execute(array(
         "name" => $name,
         "password" => $password
-    ));
+    )
+  );
     echo "inscription réussie";
 }
 ?>
