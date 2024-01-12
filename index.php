@@ -33,12 +33,7 @@ $bdd -> setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 catch (PDOException $e) {
 echo "connexion échouée: " . $e->getMessage();
 }
-$sql = "SELECT * FROM user";
-$req = $bdd->query($sql);
-while ($rep = $req->fetch()) {
-echo $rep['name']."<br>";
-echo "<input type='button'>";
-}
+
 ?>
 </body>
 

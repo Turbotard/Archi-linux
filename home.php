@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+
+<?php
+
+$sql = "SELECT * FROM user";
+$req = $bdd->query($sql);
+while ($rep = $req->fetch()) {
+echo $rep['name']."<br>";
+echo "<input type='button'>";
+}
+
+?>
+
 <div class="block-2">
         <div class="block-2-header">
             <h3>Liste des utilisateurs (0)</h3>
@@ -31,4 +43,5 @@
         </div>
     </div>
 </body>
+
 </html>
