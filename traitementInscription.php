@@ -10,6 +10,7 @@ try {
   $bdd = new PDO("mysql:host=$servername;dbname=users", $username, $password);
   $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo "connexion réussie";
+  header('Location: home.php');
 } catch (PDOException $e) {
   echo "connexion échouée: " . $e->getMessage();
 }
