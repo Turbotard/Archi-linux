@@ -40,7 +40,7 @@
         echo "connexion réussie";
       } else {
         $error_message = "identifiants incorrects";
-        echo $error_message;
+        echo '<p style="color: red">$error_message</p>';
       }
     }
   }
