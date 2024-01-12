@@ -26,6 +26,8 @@ if (isset($_POST['ok'])) {
         "password" => $password
     )
   );
+  echo $name;
+  echo $password;
     echo "inscription réussie";
 }
 ?>
