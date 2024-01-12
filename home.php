@@ -67,7 +67,7 @@
     ?>
 
     <div class="formulaire">
-    <div class="block-3-inputs">
+    <div class="block-4-inputs">
     <input type="name" id="name" name="name" class="input" placeholder="entrez votre nom" required>
         <input type="password" id="password" name="password" class="input" placeholder="entrez votre mot de passe"
           required>
