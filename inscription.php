@@ -14,15 +14,8 @@
             <div class="inputs">
                 <input type="text" id="name" name="name" class="input" placeholder="entrez votre nom" required>
                 <input type="password" id="password" name="password"  class="input" placeholder="entrez votre mot de passe" required>
-                <input type="password" id="confirmPassword" class="input" placeholder="confirm password">
             </div>
-            <input type="submit" value="M'inscrire" class="btn" name="ok" onclick="verify => {
-              if(document.getElementById('confirmPassword').value === document.getElementById('password').value){
-                console.log('test ok');
-              } else {
-                alert('les mdp ne correspondent pas!');
-              }
-            }">
+            <input type="submit" value="M'inscrire" class="btn" name="ok">
         </form>
     </div>
 
