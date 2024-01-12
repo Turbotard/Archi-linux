@@ -11,7 +11,7 @@
 <body>
   <?php
   session_start(); // Démarrage de la session
-
+  
   $env = parse_ini_file('variables.env');
 
   $servername = $env['servername'];
@@ -36,8 +36,9 @@
 
       if ($rep) {
         $_SESSION['user_id'] = $rep['id'];
-        $_SESSION['user_name'] = $name; 
-        echo "connexion réussie";
+        $_SESSION['user_name'] = $name;
+        header("Location: home.php");
+        exit;
       } else {
         $error_message = "identifiants incorrects";
         echo '<p style="color: red">$error_message</p>';
@@ -51,8 +52,10 @@
     <form method="POST" action="">
       <div class="inputs">
         <input type="name" id="name" name="name" class="input" placeholder="entrez votre nom" required>
-        <input type="password" id="password" name="password" class="input" placeholder="entrez votre mot de passe" required>
-        <p>Vous n'avez pas encore de compte ? <a href="inscription.php" style="text-decoration: none; color: blue;">inscrivez-vous !</a></p>
+        <input type="password" id="password" name="password" class="input" placeholder="entrez votre mot de passe"
+          required>
+        <p>Vous n'avez pas encore de compte ? <a href="inscription.php"
+            style="text-decoration: none; color: blue;">inscrivez-vous !</a></p>
       </div>
       <input type="submit" value="Connexion" name="ok" class="btn">
     </form>
