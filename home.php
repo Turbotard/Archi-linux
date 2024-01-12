@@ -66,6 +66,17 @@
     }
     ?>
 
+    <div class="formulaire">
+    <div class="block-3-inputs">
+            <a href="connexion.php"><input type="button" class="btn" value="Connexion"></a>
+            <a href="inscription.php"><input type="button" class="btn" value="Inscription"></a>
+        </div>
+    </div>
+<form>
+
+</form>
+    </div>
+
 </body>
 
 </html>
