@@ -1,5 +1,5 @@
 <?php
-session_start(); // Démarrage de la session
+session_start();
 
 $env = parse_ini_file('variables.env');
 
